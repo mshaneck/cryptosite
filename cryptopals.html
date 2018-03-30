@@ -1,0 +1,67 @@
+<script src="./js/forms.js" />
+<div id=cryptopals>
+<div class=subheader>Tools For Cryptopals Challenges</div>
+<div class=subsubheader>C1: Convert Hex to Base64</div>
+This tool takes a hex string, decodes it, then converts the underlying binary to base64.
+<form class=cryptoform id=hex2b64>
+  <input type=text size=100 name=hexstring pattern="[a-f0-9]{1,}" title="Input only hexadecimal digits"><br>
+  <input type=submit name=submit value="Convert">
+</form>
+<div id=outputhex2b64 class=output></div>
+
+<div class=subsubheader>C2: XOR Two Hex Strings</div>
+This tool takes two hex strings, decodes them, XORs them together, and prints the output.
+<form class=cryptoform id=hexxor>
+  <input type=text size=100 name=hexstring1 pattern="[a-f0-9]{1,}" title="Input only hexadecimal digits"><br>
+  <input type=text size=100 name=hexstring2 pattern="[a-f0-9]{1,}" title="Input only hexadecimal digits"><br>
+  <input type=submit name=submit value="XOR">
+</form>
+<div id=outputhexxor class=output></div>
+
+<div class=subsubheader>C3 Helper: Single Byte XOR Cipher</div>
+This tool takes and ASCII string and a single hex byte, and prints the hexadecimal ciphertext that results when the string is XOR encrypted with that byte.
+<form class=cryptoform id=singleXOR>
+  <input type=text size=100 name=plaintext><br>
+  <input type=text size=5 maxlength=2 pattern="[a-f0-9]{1,2}" placeholder="00" name=key title="Key should contain a single hex byte."><br>
+  <input type=submit name=submit value="XOR">
+</form>
+<div id=outputsingleXOR class=output></div>
+
+<div class=subsubheader>C3: Crack Single Byte XOR Cipher</div>
+Given a single hex string that has been encrypted by a single byte XOR cipher, this will crack it and print the plaintext along with the detected hex key.
+<form class=cryptoform id=crackSingleXOR>
+  <input type=text size=100 name=ciphertext pattern="[a-f0-9]{1,}" title="Input only hexadecimal digits"><br>
+  <input type=submit name=submit value="Crack">
+</form>
+<div id=outputcrackSingleXOR class=output></div>
+
+<div class=subsubheader>C4: Detect Single Byte XOR Cipher</div>
+Given a number of hex strings in a file, where one has been encrypted by a single byte XOR cipher, this will determine which line is the one that is the proper ciphertext.
+<form class=cryptoform id=detectSingleXOR>
+  <input type=file name=ciphertexts required><br>
+  <input type=submit name=submit value="Detect">
+</form>
+<div id=outputdetectSingleXOR class=output></div>
+
+<div class=subsubheader>C5: Repeating Key XOR Cipher</div>
+Given a single plaintext string and a keyword/phrase, this will give the hex string that results from encrypting the plaintext using a repeating key XOR cipher.
+<form class=cryptoform id=repeatingKeyXOR>
+  <input type=text size=100 name=plaintext ><br>
+    <input type=text size=25 name=key ><br>
+  <input type=submit name=submit value="Encrypt">
+</form>
+<div id=outputrepeatingKeyXOR class=output></div>
+
+<div class=subsubheader>C6: Crack Repeating Key XOR Cipher</div>
+Given a file that contains either base64 encoded, or hex encoded data, that has been encrypted using a repeated key XOR cipher, this will break it, print the plaintext and corresponding key.
+<form class=cryptoform id=breakRepeatingKeyXOR>
+  <input type=file name=ciphertext required><br>
+  <input type=submit name=submit value="Crack">
+</form>
+<div id=outputbreakRepeatingKeyXOR class=output></div>
+
+
+
+
+
+</div>
